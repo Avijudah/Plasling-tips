@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plasling Tips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Plastic Modeling Tips</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tips">Modeling Tips</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to Plastic Modeling Tips</h2>
+        <p>Explore our tips and techniques to enhance your plastic modeling skills.</p>
+    </section>
+
+    <section id="tips">
+        <h2>Modeling Tips</h2>
+        <ul id="tipsList"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Plastic Modeling Tips</p>
+    </footer>
+
+    <script>
+        // Sample tips data (you can replace this with your 50 tips)
+        const tipsData = [
+            "Clean and prepare your workspace before starting a project.",
+            "Use high-quality modeling glue for better adhesion.",
+            "Take your time and be patient, especially with intricate details.",
+            "Prime your models before painting to improve paint adhesion.",
+            "Experiment with different weathering techniques for realistic effects.",
+            // Add more tips here...
+        ];
+
+        // Function to dynamically populate the tips list
+        function populateTipsList() {
+            const tipsList = document.getElementById("tipsList");
+
+            tipsData.forEach((tip, index) => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<strong>Tip ${index + 1}:</strong> ${tip}`;
+                tipsList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to populate the tips list
+        populateTipsList();
+    </script>
+
+</body>
+
+</html>
